@@ -611,7 +611,7 @@ export default function App() {
       {/* Sidebar Menu */}
       <div className="w-72 bg-white border-r border-gray-200 shadow-lg z-50 flex flex-col no-pan shrink-0">
         <div className="p-6 border-b border-gray-100">
-          <h1 className="text-xl font-black text-gray-900 tracking-tight leading-tight">MarTech<br/><span className="text-indigo-600">Orchestration</span></h1>
+          <h1 className="text-xl font-black text-gray-900 tracking-tight leading-tight">Agentic marketing<br/><span className="text-indigo-600">operating model</span></h1>
         </div>
         <div className="flex-1 overflow-y-auto py-4">
           <MenuButton mode="strategy" label="1. Strategy" current={viewMode} set={setViewMode} />
