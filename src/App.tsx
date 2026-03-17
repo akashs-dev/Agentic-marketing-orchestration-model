@@ -268,7 +268,7 @@ const AgentModal = ({ agent, onClose }: { agent: any, onClose: () => void }) => 
       case 'journey_orchestrator':
         return (
           <div className="space-y-4">
-            <div className="bg-blue-50 border border-blue-100 p-4 rounded-xl h-72 relative overflow-hidden flex flex-col items-center justify-center">
+            <div className="bg-blue-50 border border-blue-100 p-4 rounded-xl min-h-96 max-h-[500px] overflow-y-auto relative flex flex-col items-center justify-center">
               <div className="absolute top-0 left-0 w-1 h-full bg-blue-400"></div>
               <div className="flex items-center justify-between w-full absolute top-4 px-4">
                 <div className="flex items-center gap-2 text-blue-700 font-bold">
@@ -319,8 +319,8 @@ const AgentModal = ({ agent, onClose }: { agent: any, onClose: () => void }) => 
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className={`bg-white rounded-lg border-2 overflow-hidden transition-all duration-300 ${activeVariant === 'A' ? 'border-purple-400 shadow-md scale-105' : 'border-gray-200 opacity-60'}`}>
-                  <div className="h-20 bg-gray-200 flex items-center justify-center">
-                    <span className="text-gray-400 text-xs">Image: Student Lifestyle</span>
+                  <div className="h-40 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center overflow-hidden">
+                    <img src="https://images.pexels.com/photos/415886/pexels-photo-415886.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Student Lifestyle" className="w-full h-full object-cover" onError={(e) => {e.target.style.display = 'none'}} />
                   </div>
                   <div className="p-3">
                     <p className="text-xs font-bold text-gray-500 mb-1">Variant A (Control)</p>
@@ -329,8 +329,8 @@ const AgentModal = ({ agent, onClose }: { agent: any, onClose: () => void }) => 
                 </div>
                 <div className={`bg-white rounded-lg border-2 overflow-hidden transition-all duration-300 relative ${activeVariant === 'B' ? 'border-purple-400 shadow-md scale-105' : 'border-gray-200 opacity-60'}`}>
                   <div className="absolute top-1 right-1 bg-purple-500 text-white text-[10px] px-1.5 py-0.5 rounded font-bold">Predicted Winner</div>
-                  <div className="h-20 bg-purple-100 flex items-center justify-center">
-                    <span className="text-purple-400 text-xs">Image: Tech Gadgets</span>
+                  <div className="h-40 bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center overflow-hidden">
+                    <img src="https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Tech Gadgets" className="w-full h-full object-cover" onError={(e) => {e.target.style.display = 'none'}} />
                   </div>
                   <div className="p-3">
                     <p className="text-xs font-bold text-purple-600 mb-1">Variant B (Tech Segment)</p>
